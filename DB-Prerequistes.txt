@@ -1,0 +1,10 @@
+Make sure you're connected to your Database
+
+## Step 1 - Database
+use niclasBookshelfDB
+
+## Step 2 - Add Collection Books
+db.createCollection('Books')
+
+## Step 3 -Add Demo Books
+db.Books.insertMany([{'title':'Harry Potter og De Vises Sten','isbn':'8700398365','publishYear':2000,'description':'Da Harry er 11 år, får han at vide, at hans far var en berømt og respekteret troldmand, og hans mor en overordentlig dygtig heks.','author':'J. K. Rowling','image':'https://server.fustarmy.net/public/opgave/pictures/Hp1.jpg'},{'title':'Harry Potter og Hemmelighedernes Kammer','isbn':'9788700459946','publishYear':2014,'description':'Efter en rædsom sommer hos familien Dursley vender Harry tilbage til Hogwarts for at fortsætte sin troldmandsuddannelse.','author':'J. K. Rowling','image':'https://server.fustarmy.net/public/opgave/pictures/Hp2.png'},{'title':'Valdemarsro - aftensmad','isbn':'9788740053388','publishYear':2019,'description':'Valdemarsro - aftensmad er en skøn, brugbar grundbog at have i køkkenet – fuld af inspiration til familiens måltider året rundt til både hverdag og fest.Valdemarsro er Danmarks største madog livsstilsblog med over 1,6 millioner besøgende hver måned.','author':'Ann-Christine Hellerup Brandt','image':'https://server.fustarmy.net/public/opgave/pictures/aftensmad.png'},{'title':'All the Light We Cannot See','isbn':'9781476746586','publishYear':2019,'description':'Marie-Laure lives in Paris near the Museum of Natural History, where her father works. When she is twelve, the Nazis occupy Paris and father and daughter flee to the walled citadel of Saint-Malo, where Marie-Laure’s reclusive great uncle lives in a tall house by the sea. With them they carry what might be the museum’s most valuable and dangerous jewel.','author':'Anthony Doerr','image':'https://server.fustarmy.net/public/opgave/pictures/AlltheLightWeCannotSee.jpg'}])
