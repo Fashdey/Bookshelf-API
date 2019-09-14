@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using BookshelfAPI.Models;
+using BookshelfAPI.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -31,6 +32,8 @@ namespace BookshelfAPI
 
             services.AddSingleton<IBookshelfDatabaseSettings>(sp =>
                 sp.GetRequiredService<IOptions<BookshelfDatabaseSettings>>().Value);
+
+            services.AddSingleton<BookService>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
