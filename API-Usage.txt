@@ -1,0 +1,14 @@
+A few Examples in how to use the API - in case Swagger isn't correct
+
+
+DELETE Book
+Delete Request
+https://localhost:44348/api/books/5d7d025131e7140043ec8d70
+Last being the ObjectID in string format, to be deleted
+
+
+CREATE Book
+Post Request
+https://localhost:44348/api/books
+Raw Body (JsonFormat)
+{"title":"All the Light We Cannot See","isbn":"9781476746586","publishYear":2019,"description":"Marie-Laure lives in Paris near the Museum of Natural History, where her father works. When she is twelve, the Nazis occupy Paris and father and daughter flee to the walled citadel of Saint-Malo, where Marie-Laure’s reclusive great uncle lives in a tall house by the sea. With them they carry what might be the museum’s most valuable and dangerous jewel.","author":"Anthony Doerr","image":"https://server.fustarmy.net/public/opgave/pictures/AlltheLightWeCannotSee.jpg"}
