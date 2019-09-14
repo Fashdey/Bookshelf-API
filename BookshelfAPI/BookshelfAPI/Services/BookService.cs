@@ -23,6 +23,12 @@ namespace BookshelfAPI.Services
         public Book Get(string id) =>
             _books.Find<Book>(book => book.Id == id).FirstOrDefault();
 
+        public List<Book> GetByYear(int year) =>
+            _books.Find(book => book.PublishYear == year).ToList();
+
+        public List<Book> GetByAuthor(string author) =>
+            _books.Find(book => book.Author == author).ToList();
+
         public Book Create(Book book)
         {
             _books.InsertOne(book);

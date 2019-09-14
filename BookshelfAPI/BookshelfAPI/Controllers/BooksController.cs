@@ -20,7 +20,7 @@ namespace BookshelfAPI.Controllers
         public ActionResult<List<Book>> Get() =>
             _bookService.Get();
 
-        [HttpGet("{id:length(24)}", Name = "GetBook")]
+        [HttpGet("/byId/{id:length(24)}", Name = "GetBook")]
         public ActionResult<Book> Get(string id)
         {
             var book = _bookService.Get(id);
@@ -32,6 +32,14 @@ namespace BookshelfAPI.Controllers
 
             return book;
         }
+
+        [HttpGet("byYear/{year:int}", Name = "BooksByYear")]
+        public ActionResult<List<Book>> BooksByYear(int year) =>
+            _bookService.GetByYear(year);
+
+        [HttpGet("byAuthor/{author}", Name = "BooksByAuthor")]
+        public ActionResult<List<Book>> BooksByAuthor(string author) =>
+            _bookService.GetByAuthor(author);
 
         [HttpPost]
         public ActionResult<Book> Create(Book book)
